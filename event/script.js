@@ -5,7 +5,7 @@ const giftQueue = [];
 let isProcessingWelcome = false;
 let isProcessingGift = false;
 
-const giftSound = new Audio("./assets/gift.wav");
+const giftSound = new Audio("../assets/gift.wav");
 giftSound.volume = 1; // âm lượng từ 0 đến 1
 
 // Kết nối WebSocket
