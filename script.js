@@ -6,7 +6,11 @@ function connect() {
   websocket = new WebSocket("ws://localhost:21213/");
 
   websocket.onopen = () => {
-    document.getElementById("status").innerHTML = "Connected";
+    document.getElementById("status").innerHTML = `
+      Connected<br>
+      <a href="/chat" target="_blank"><button>Go To Chat</button></a>
+      <a href="/events" target="_blank"><button>Go To Events</button></a>
+    `;
   };
 
   websocket.onclose = () => {
