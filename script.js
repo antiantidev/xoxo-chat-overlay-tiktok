@@ -8,8 +8,8 @@ function connect() {
   websocket.onopen = () => {
     document.getElementById("status").innerHTML = `
       Connected<br>
-      <a href="/chat" target="_blank"><button>Go To Chat</button></a>
-      <a href="/events" target="_blank"><button>Go To Events</button></a>
+      <a href="/xoxo-chat-overlay-tiktok/chat" target="_blank"><button>Go To Chat</button></a>
+      <a href="/xoxo-chat-overlay-tiktok/events" target="_blank"><button>Go To Events</button></a>
     `;
   };
 
