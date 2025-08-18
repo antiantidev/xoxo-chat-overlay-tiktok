@@ -18,69 +18,42 @@ function getFieldValue(key, defaultValue) {
 
 // 👉 Áp dụng fields -> CSS variables
 function applyFields() {
-  document.documentElement.style.setProperty(
-    "--font-size",
-    getFieldValue("fontSize", 22) + "px"
-  );
-  document.documentElement.style.setProperty(
-    "--text-color",
-    getFieldValue("textColor", "#000000")
-  );
-  // User
-  document.documentElement.style.setProperty(
-    "--user-bg",
-    getFieldValue("userBg", "#ffffff")
-  );
-  document.documentElement.style.setProperty(
-    "--user-border",
-    getFieldValue("userBorder", "#000000")
-  );
+  const fields = {
+    "--font-size": ["fontSize", 22, "px"],
+    "--text-color": ["textColor", "#000000"],
 
-  // Nick Name
-  document.documentElement.style.setProperty(
-    "--nickname-bg",
-    getFieldValue("nicknameBg", "#ffcc00")
-  );
-  document.documentElement.style.setProperty(
-    "--nickname-text",
-    getFieldValue("nicknameText", "#000000")
-  );
-  document.documentElement.style.setProperty(
-    "--nickname-font-size",
-    getFieldValue("nicknameFontSize", 20) + "px"
-  );
-  document.documentElement.style.setProperty(
-    "--nickname-border",
-    getFieldValue("nicknameBorder", "#000000")
-  );
-  document.documentElement.style.setProperty(
-    "--text-background",
-    getFieldValue("textBg", "#ffffff")
-  );
-  document.documentElement.style.setProperty(
-    "--text-border",
-    getFieldValue("textBorder", "#000000")
-  );
-  document.documentElement.style.setProperty(
-    "--avatar-border",
-    getFieldValue("avatarBorder", "#000000")
-  );
-  document.documentElement.style.setProperty(
-    "--gifter-bg",
-    getFieldValue("gifterBg", "rgba(71, 126, 255, 0.7)")
-  );
-  document.documentElement.style.setProperty(
-    "--follow-bg",
-    getFieldValue("followBg", "rgba(215, 78, 54, 0.6)")
-  );
-  document.documentElement.style.setProperty(
-    "--top-gifter-bg",
-    getFieldValue("topGifterBg", "rgba(254, 44, 85, 0.4)")
-  );
-  document.documentElement.style.setProperty(
-    "--mod-bg",
-    getFieldValue("modBg", "rgba(63, 63, 63, 0.5)")
-  );
+    // User
+    "--user-bg": ["userBg", "#ffffff"],
+    "--user-border": ["userBorder", "#000000"],
+
+    // Nick Name
+    "--nickname-bg": ["nicknameBg", "#ffcc00"],
+    "--nickname-text": ["nicknameText", "#000000"],
+    "--nickname-font-size": ["nicknameFontSize", 20, "px"],
+    "--nickname-border": ["nicknameBorder", "#000000"],
+
+    // Text
+    "--text-background": ["textBg", "#ffffff"],
+    "--text-border": ["textBorder", "#000000"],
+
+    // Avatar
+    "--avatar-border": ["avatarBorder", "#000000"],
+
+    // Special Roles
+    "--gifter-bg": ["gifterBg", "rgba(71, 126, 255, 0.7)"],
+    "--follow-bg": ["followBg", "rgba(215, 78, 54, 0.6)"],
+    "--top-gifter-bg": ["topGifterBg", "rgba(254, 44, 85, 0.4)"],
+    "--mod-bg": ["modBg", "rgba(63, 63, 63, 0.5)"],
+  };
+
+  for (const [cssVar, [key, defaultValue, unit = ""]] of Object.entries(
+    fields
+  )) {
+    document.documentElement.style.setProperty(
+      cssVar,
+      getFieldValue(key, defaultValue) + unit
+    );
+  }
 }
 
 // 👉 Lấy settings từ fields
