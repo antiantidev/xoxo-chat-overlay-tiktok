@@ -1,0 +1,22 @@
+{
+  "backgroundColor": "rgba(36, 6, 73, 0.15)",
+  "maxMessages": 10,
+  "lineHeight": 90,
+  "fontSize": 22,
+  "showAvatar": false,
+  "primaryColor": "#ffffff",
+  "accentColor": "#000000",
+  "textColor": "#000000",
+  "nicknameBg": "#ffcc00",
+  "nicknameText": "#000000",
+  "textBg": "#ffffff",
+  "textBorder": "#000000",
+  "avatarBorder": "#000000",
+  "gifterBg": "rgba(71, 126, 255, 0.7)",
+  "followBg": "rgba(215, 78, 54, 0.6)",
+  "topGifterBg": "rgba(254, 44, 85, 0.4)",
+  "modBg": "rgb(0, 0, 0)",
+  "nicknameFontSize": 20,
+  "userBg": "#ffffff",
+  "userBorder": "#000000"
+}

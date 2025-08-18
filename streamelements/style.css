@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap");
+
+:root {
+  --font-size: 22px;
+
+  /* 🎨 Màu nền & viền */
+  --text-background: #fff;
+  --text-border: #000;
+  --avatar-border: #000;
+
+  /* 🎨 Màu chữ & nền chữ */
+  --text-color: #000;
+  --special-nickname-gradient: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+
+  /* User */
+  --user-bg: #fff;
+  --user-border: #000;
+
+  /* Nick Name */
+  --nickname-bg: #000;
+  --nickname-text: #000;
+  --nickname-font-size: 20px;
+  --nickname-border: #000;
+
+  /* 🎖️ Badge nền */
+  --gifter-bg: rgba(71, 126, 255, 0.7);
+  --follow-bg: rgba(215, 78, 54, 0.6);
+  --top-gifter-bg: rgba(254, 44, 85, 0.4);
+  --mod-bg: rgba(63, 63, 63, 0.5);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  font-family: "TikTok Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  overflow: hidden;
+  height: 100vh;
+  /* background: black; */
+}
+
+#status {
+  display: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 15px;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.msg {
+  display: flex;
+  position: relative;
+  opacity: 0;
+  transform: translateY(200px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  min-width: 320px;
+  width: fit-content;
+}
+
+.msg.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 120ms;
+}
+
+.avatar-wrapper {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-right: 15px;
+  border: 3px solid var(--avatar-border);
+}
+
+.msg-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 20px 20px 0 0;
+  border-top: 4px solid var(--user-border);
+  border-left: 4px solid var(--user-border);
+  border-right: 4px solid var(--user-border);
+  padding: 10px 15px;
+  background: var(--user-bg);
+}
+
+.gifter-group,
+.follow-badge,
+.top-gifter,
+.mod-wrapper {
+  border: 2px solid var(--text-border);
+  border-radius: 50px;
+}
+
+.gifter-icon,
+.mod-icon,
+.top-icon,
+.follow-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.nickname {
+  background-color: var(--nickname-bg);
+  color: var(--nickname-text);
+  font-size: var(--nickname-font-size);
+  padding: 2px 6px;
+  border-radius: 25px;
+  border: 2px solid var(--nickname-border);
+}
+
+.special-user .nickname {
+  background: var(--special-nickname-gradient);
+}
+
+.gifter-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: var(--gifter-bg);
+  padding: 2px 6px;
+  font-size: 12px;
+  color: white;
+}
+
+.follow-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: var(--follow-bg);
+  padding: 2px 6px;
+  font-size: 12px;
+  color: white;
+}
+
+.top-gifter {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: var(--top-gifter-bg);
+  padding: 2px 6px;
+  font-size: 12px;
+  color: white;
+}
+
+.mod-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: var(--mod-bg);
+  padding: 2px 6px;
+  font-size: 12px;
+  color: white;
+}
+
+.text {
+  padding: 10px 15px;
+  background: var(--text-background);
+  color: var(--text-color);
+  min-width: 320px;
+  border-radius: 0px 0px 20px 20px;
+  position: relative;
+  font-size: var(--font-size);
+  border: 4px solid var(--text-border);
+  font-weight: 400;
+}
+
+.text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -4px;
+  right: -4px;
+  bottom: -10px;
+  z-index: -1;
+  border-radius: 0 0 25px 25px;
+  border-bottom: 10px solid #000;
+}
+
+.fade-out {
+  opacity: 0 !important;
+  transform: translateY(-10px) !important;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}

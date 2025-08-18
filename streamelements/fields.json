@@ -1,0 +1,106 @@
+{
+  "maxMessages": {
+    "type": "number",
+    "label": "Max messages",
+    "value": 10,
+    "min": 1,
+    "max": 100,
+    "group": "🏅 Settings"
+  },
+  "lineHeight": {
+    "type": "number",
+    "label": "Line height (px)",
+    "value": 90,
+    "min": 40,
+    "max": 200,
+    "group": "🏅 Settings"
+  },
+  "fontSize": {
+    "type": "number",
+    "label": "Font size (px)",
+    "value": 22,
+    "min": 10,
+    "max": 40,
+    "group": "🏅 Settings"
+  },
+  "nicknameFontSize": {
+    "type": "number",
+    "label": "Nick Name Font size (px)",
+    "value": 20,
+    "min": 10,
+    "max": 40,
+    "group": "🏅 Nick Name Settings"
+  },
+  "avatarBorder": {
+    "type": "colorpicker",
+    "label": "Avatar Border Color",
+    "value": "#000000",
+    "group": "🏅 Avatar Settings"
+  },
+  "userBg": {
+    "type": "colorpicker",
+    "label": "User Background",
+    "value": "#ffffff",
+    "group": "🏅 User Settings"
+  },
+  "userBorder": {
+    "type": "colorpicker",
+    "label": "User Border Color",
+    "value": "#000000",
+    "group": "🏅 User Settings"
+  },
+  "nicknameBg": {
+    "type": "colorpicker",
+    "label": "Nickname Background",
+    "value": "#ffcc00",
+    "group": "🏅 Nick Name Settings"
+  },
+  "nicknameText": {
+    "type": "colorpicker",
+    "label": "Nickname Text Color",
+    "value": "#000000",
+    "group": "🏅 Nick Name Settings"
+  },
+  "textColor": {
+    "type": "colorpicker",
+    "label": "Comment Text Color",
+    "value": "#000000",
+    "group": "🏅 Comment Settings"
+  },
+  "textBg": {
+    "type": "colorpicker",
+    "label": "Comment Background",
+    "value": "#FFFFFF",
+    "group": "🏅 Comment Settings"
+  },
+  "textBorder": {
+    "type": "colorpicker",
+    "label": "Comment Border Color",
+    "value": "#000000",
+    "group": "🏅 Comment Settings"
+  },
+  "gifterBg": {
+    "type": "colorpicker",
+    "label": "Gifter Badge Background",
+    "value": "rgba(71, 126, 255, 0.7)",
+    "group": "🏅 Badge Settings"
+  },
+  "followBg": {
+    "type": "colorpicker",
+    "label": "Follow Badge Background",
+    "value": "rgba(215, 78, 54, 0.6)",
+    "group": "🏅 Badge Settings"
+  },
+  "topGifterBg": {
+    "type": "colorpicker",
+    "label": "Top Gifter Badge Background",
+    "value": "rgba(254, 44, 85, 0.4)",
+    "group": "🏅 Badge Settings"
+  },
+  "modBg": {
+    "type": "colorpicker",
+    "label": "Moderator Badge Background",
+    "value": "rgba(63, 63, 63, 0.5)",
+    "group": "🏅 Badge Settings"
+  }
+}
